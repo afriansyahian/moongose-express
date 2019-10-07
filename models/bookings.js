@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-var addressSchema = new Schema(
+var bookingsSchema = new Schema(
   {
     address: { type: String, required: true }
   },
   { timestamps: true }
 );
 
-const Address = mongoose.model("Address", addressSchema);
-module.exports = Address;
+const Bookings = mongoose.model("Bookings", addressSchema);
+module.exports = Bookings;

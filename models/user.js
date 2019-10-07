@@ -6,14 +6,20 @@ var userSchema = new Schema({
   password: String,
   email: String,
   phoneNumber: String,
-  address:[
+  bookings:[
   {
     type: Schema.Types.ObjectId,
-    ref: "Address"
+    ref: "Bookings"
   }
+  ],
+  avatar: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "userImage"
+    }
   ]
 },
-{ timestapms: true}
+{ timestamps: true}
 );
 const User = mongoose.model("users", userSchema);
 
